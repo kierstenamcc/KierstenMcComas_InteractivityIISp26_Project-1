@@ -1,0 +1,100 @@
+ .monospace {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+ 
+ /* Main wrapper */
+.main-container {
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Top containers */
+.one-container {
+  background: #2f3442;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+   align-items: center;
+}
+
+.two-container {
+  background: #454b5c;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+   align-items: center;
+}
+
+/* Title */
+.title-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Split column grid */
+.split-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+
+/* Three Cards */
+.box {
+  background: #f4c9dd;
+  color: #222;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  min-height: 200px;
+  transition: 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  border: 10px;
+  border-color: hotpink;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.box {
+  background: #f4c9dd;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+/* inner container */
+.card-inner {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  height: auto;
+  text-align: center;
+}
+
+/* button styling */
+.card-inner button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #393E4D;
+  color: white;
+  cursor: pointer;
+}
