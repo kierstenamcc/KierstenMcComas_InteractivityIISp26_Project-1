@@ -1,86 +1,128 @@
 <!DOCTYPE html>
-<html>
-<body>
-<body style="background-color:#393E4D;"></body>
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container in a Container</title>
-    <link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+    body {
+      font-size: 16px; /* Sets default for the whole page */
+    }
+    h1 {
+      font-size: 26px;
+    }
+  </style>
+
+
+
+  <meta charset="UTF-8">
+  <title>Container in a Container</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="project_1.css">
 </head>
-<body>
-    <!-- One Container -->
-    <div class="one-container" id="outer">
-        <p>One Container</p>
 
-        <!-- Two Container -->
-        <div class="two-container" id="two">
-            <p>Two Container</p>
-        </div>
-        <button type="button">Home</button>
-        <button type="button">About</button>
-        <button type="button">Art</button>
-        <button type="button">Contact</button>
+<body style="background-color:#1f4f5b;">
 
-        <nav>
-  <ul>
-    <li><a href="default.asp">Home</a></li>
-    <li><a href="news.asp">News</a></li>
-    <li><a href="contact.asp">Contact</a></li>
-    <li><a href="about.asp">About</a></li>
-  </ul>
-</nav>
+  <!-- MAIN WRAPPER -->
+  <div class="main-container">
 
+    <!-- NAV BAR -->
+    <div class="one-container"> <!-- background -->
+      <color:#CF8E80;>
+      
+
+      <div class="two-container">
+        <h1>how being active has changed my life</h1>
+      </div>
+
+      <nav>
+        <b><ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">photos</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+        </b>
+      </nav>
+
+      <!-- Audio barrr -->
+      <div class="audio-bar">
+  <audio id="player" src="end-of-line-but-better.mp3"></audio>
+
+  <button id="playBtn">▶</button>
+
+  <input type="range" id="seek" value="0">
+</div>
+
+
+      <!-- 3 COLUMN SECTION -->
+<div class="box">
+    <div class="card-inner">
+      <h2>Paragraph</h2>
+      <width="300%" height="auto">
+    
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <align='left'>
+    </div>
+      <div class="split-container">
+
+
+<!-- 3 COLUMN SECTION -->
+  <div class="box">
+    <div class="card-inner">
+      <h2>Physical Activities</h2> <!-- bottom row cards -->
+      <ul>
+        <li>weightlifting</li>
+        <li>kickboxing</li>
+        <li>brazilian jiujitsu</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="card-inner">
+      <h2>before</h2>
+       <img src="gym before.JPG" class="artist-img">
+
+      <p>feb 10, 2022</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="card-inner">
+      <h2>after</h2>
+       <img src="gym after.JPG" class="artist-img">
+      <p>aug 31, 2024</p>
+    </div>
+  </div>
+  
+
+  <div class="box">
+    <div class="card-inner">
+      <h2>Texttt a</h2>
+      <p>Text</p>
+      <button>View</button>
+    </div>
+  </div>
+  
+  <div class="box">
+    <div class="card-inner">
+      <h2>Texttt b</h2>
+      <width="300%" height="auto">
+      <p>Text</p>
+      <button>View</button>
+    </div>
+    
+  </div>
+     </div>
+    
+    </div>
     </div>
 
-    <!-- Colors of my Containers -->
-    <style>
-        .one-container {
-            background-color: plum; 
-            padding: 20px;
-            border: 1px solid black;
-        }
-    </style>
-
-     <style>
-        .two-container {
-            background-color: rgb(164, 219, 146); 
-            padding: 20px;
-            border: 1px solid plum;
-        }
-    </style>
-
-
-<!-- Container Radius-->
-<style>.one-container {
-  border-radius: 15px; /* Applies a 15px radius to all corners */
-  border: 2px solid red;
-  padding: 10px;
-</style>
-
-
-<style>.two-container {
-  border-radius: 15px; /* Applies a 15px radius to all corners */
-  border: 2px solid red;
-  padding: 10px;
-}
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
+    
+    
 </body>
-</html>
-
-
-</body>
-</html>
