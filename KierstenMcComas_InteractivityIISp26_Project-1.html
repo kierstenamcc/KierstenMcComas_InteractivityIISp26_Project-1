@@ -50,23 +50,32 @@
       </nav>
 
       <!-- Audio barrr -->
-      <div class="audio-bar">
-  <audio id="player" src="end-of-line-but-better.mp3"></audio>
+<div class="audio-bar">
+  <audio id="player" preload="auto">
+    <source src="./end-of-line-but-better.mp3" type="audio/mpeg">
+  </audio>
+
+  <span id="currentTime">0:00</span>
 
   <button id="playBtn">▶</button>
+  <input type="range" id="seek" min="0" max="100" value="0">
 
-  <input type="range" id="seek" value="0">
+  <span id="duration">3:19</span>
 </div>
+
+
+
+
 
 
       <!-- 3 COLUMN SECTION -->
 <div class="box">
     <div class="card-inner">
-      <h2>Paragraph</h2>
+      <h2>getting into the gym</h2>
       <width="300%" height="auto">
-    
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <align='left'>
+    <align='left'>
+      <p>Throughout middle and high school, I didn't really consider myself a particularly athletic person. I took up several sports as a kid but they were never really my thing. It wasn't until my senior year of high school that I would be encouraged to work out officially. I'd watch transformation videos of other people and knew that it would never be me. After many excuses and protests however, I gave in. It took a few weeks for me to actually start enjoying the work I was doing, but once it took hold I realized just how beneficial it started to be in my life.</p>
+      </align>
     </div>
       <div class="split-container">
 
@@ -74,11 +83,20 @@
 <!-- 3 COLUMN SECTION -->
   <div class="box">
     <div class="card-inner">
-      <h2>Physical Activities</h2> <!-- bottom row cards -->
+      <h2>how to gain muscle</h2> <!-- bottom row cards -->
       <ul>
-        <li>weightlifting</li>
-        <li>kickboxing</li>
-        <li>brazilian jiujitsu</li>
+        <li>protein intake</li>
+        <li>proper sleep</li>
+        <li>focus on form
+        <li>consistency</li>
+       <li>challenge</li>
+      </ul>
+      <h2>recovery</h2> <!-- bottom row cards -->
+      <ul>
+        <li>hydration</li>
+        <li>stretching</li>
+        <li>rest days</li>
+        
       </ul>
     </div>
   </div>
@@ -103,25 +121,105 @@
 
   <div class="box">
     <div class="card-inner">
-      <h2>Texttt a</h2>
-      <p>Text</p>
-      <button>View</button>
+      <h2>physical activities</h2>
+      <ul>
+        <li>weightlifting</li>
+        <li>kickboxing</li>
+        <li>brazilian jiujitsu</li>
+      </ul>
+      
     </div>
   </div>
   
   <div class="box">
     <div class="card-inner">
-      <h2>Texttt b</h2>
+      <h2>improvements</h2>
       <width="300%" height="auto">
-      <p>Text</p>
-      <button>View</button>
+      <ul>
+        <li>self confidence</li>
+        <li>health and wellness</li>
+        <li>enjoyment of life</li>
+      </ul>
     </div>
-    
   </div>
+
+  <div class="box">
+    <div class="card-inner">
+      <h2>instagram</h2>
+      <width="300%" height="auto">
+      <p>gymgirl_kier</p>
+      <a href="https://www.instagram.com/gymgirl_kier/" target="_blank">
+    <button>check it out</button>
+    
+</a>
+    </div>
      </div>
     
     </div>
     </div>
+
+
+
+
+
+<script>
+const audio = document.getElementById("player");
+const playBtn = document.getElementById("playBtn");
+const seek = document.getElementById("seek");
+
+/* Wait for audio file to be ready */
+audio.addEventListener("loadedmetadata", () => {
+  seek.value = 0;
+});
+
+/* Play / Pause */
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play().catch(err => console.log(err));
+    playBtn.textContent = "⏸";
+  } else {
+    audio.pause();
+    playBtn.textContent = "▶";
+  }
+});
+
+/* Update slider as song plays */
+audio.addEventListener("timeupdate", () => {
+  if (!isNaN(audio.duration)) {
+    seek.value = (audio.currentTime / audio.duration) * 100;
+  }
+});
+
+/* Scrub */
+seek.addEventListener("input", () => {
+  if (!isNaN(audio.duration)) {
+    audio.currentTime = (seek.value / 100) * audio.duration;
+  }
+});
+
+const currentTimeEl = document.getElementById("currentTime");
+const durationEl = document.getElementById("duration");
+
+/* Convert seconds → 0:00 format */
+function formatTime(seconds) {
+  const min = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${min}:${sec.toString().padStart(2, "0")}`;
+}
+
+/* When audio loads */
+audio.addEventListener("loadedmetadata", () => {
+  durationEl.textContent = formatTime(audio.duration);
+});
+
+/* Update while playing */
+audio.addEventListener("timeupdate", () => {
+  currentTimeEl.textContent = formatTime(audio.currentTime);
+});
+
+</script>
+
+
 
     
     

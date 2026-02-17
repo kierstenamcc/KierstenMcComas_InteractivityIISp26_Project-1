@@ -1,6 +1,25 @@
 body {
   font-family: 'Orbitron', sans-serif;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+html {
+  body {
+    background-image: url("pintback.jpeg");
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    background-size: cover;      /* Scales the image to cover the entire container */
+    background-position: center; /* Centers the image in the container */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling (optional parallax effect) */
+    background-color: #1F4F5B;   /* Sets a background color in case the image doesn't load */
+  }
+
+}
+
  .monospace {
   font-family:'Orbitron', sans-serif;
 }
@@ -18,10 +37,12 @@ body {
 .one-container {
   background: #F5F1E3;
   padding: 20px;
+   font-family: 'Orbitron', sans-serif;
   border-radius: 15px;
-  margin-bottom: 30px;
-   align-items: center;
+  margin: 30px auto;   /* 👈 this centers it */
+  width: 80%;         /* or any width */
 }
+
 
 .two-container {
   background: #1F4F5B;
@@ -49,7 +70,7 @@ body {
 
 /* Three Cards */
 .box {
-  background: #84A9C0;
+  background: #84c089;
   color: #222;
   padding: 30px;
   border-radius: 20px;
@@ -72,6 +93,11 @@ nav ul {
   padding: 12px;
 }
 
+nav ul li a {
+    font-weight: bold; /* This will make all navigation links bold */
+}
+
+
 /* Buttons */
 nav li a {
   display: inline-flex;
@@ -81,8 +107,8 @@ nav li a {
   min-width: 160px;          /* makes all buttons wide */
   padding: 14px 20px;
 
-  background: #CF8E80;      /* button color */
-  color: #2f3442;
+  background: #1f4f5b;      /* button color */
+  color: #e4e5e7;
   border-radius: 14px;
   text-decoration: none;
   font-weight: 600;
@@ -93,7 +119,7 @@ nav li a {
 
 /* Hover effect */
 nav li a:hover {
-  background: hotpink;      /* hover color */
+  background: #1f4f5b;      /* hover color */
   color: white;
   transform: translateY(-2px); /* tiny lift = game UI feel */
 }
@@ -101,8 +127,8 @@ nav li a:hover {
 
 /* Hover effect */
 nav li a:hover {
-  background: hotpink;
-  color: #e9bb13;
+  background: #84A9C0;
+  color: #f4d96d;
 }
 
       /* AUDIO CONTROLS */
@@ -124,10 +150,20 @@ nav li a:hover {
           inset 0 0 0 2px rgba(255,255,255,0.6);
       }
 
+      .audio-bar span {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  color: #2f3442;
+  min-width: 40px;
+  text-align: center;
+}
+
+
       /* Play button */
       #audio-bar button,
       #playBtn {
         background: #1f4f5b;
+        color: #F5F1E3;
         border: none;
         width: 48px;
         height: 48px;
@@ -151,7 +187,7 @@ nav li a:hover {
         appearance: none;
         width: 16px;
         height: 16px;
-        background: #CF8E80;
+        background: #84A9C0;
         border-radius: 50%;
         cursor: pointer;
       }
@@ -160,7 +196,7 @@ nav li a:hover {
       #seek::-moz-range-thumb {
         width: 16px;
         height: 16px;
-        background: #CF8E80;
+        background: #84A9C0;
         border-radius: 50%;
       }
 
@@ -176,13 +212,8 @@ nav li a:hover {
     0 6px 14px rgba(0,0,0,0.15);
 }
 
-
-
-
-
-
 .box {
-  background: #84A9C0;
+  background: #1f4f5b;
   border-radius: 20px;
   padding: 15px;
 }
@@ -200,9 +231,11 @@ nav li a:hover {
 .card-inner button {
   margin-top: 12px;
   padding: 8px 16px;
+  font: 200 14px 'Orbitron', sans-serif;
   border: none;
   border-radius: 10px;
   background: #393E4D;
-  color: #F5F1E3;
+  color: #adc1ce;
   cursor: pointer;
 }
+
