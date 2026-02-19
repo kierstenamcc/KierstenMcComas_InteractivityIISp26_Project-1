@@ -1,91 +1,226 @@
 <!DOCTYPE html>
-<html>
-<body>
-<body style="background-color:#393E4D;"></body>
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container in a Container</title>
-    <link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+    body {
+      font-size: 16px; /* Sets default for the whole page */
+    }
+    h1 {
+      font-size: 26px;
+    }
+  </style>
+
+
+
+  <meta charset="UTF-8">
+  <title>Container in a Container</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="project_1.css">
 </head>
-<body>
-    <!-- One Container -->
-    <div class="one-container" id="outer">
-        <p>One Container</p>
 
-        <!-- Two Container -->
-        <div class="two-container" id="two">
-            <p>Two Container</p>
-        </div>
-        <button type="button">Home</button>
-        <button type="button">About</button>
-        <button type="button">Art</button>
-        <button type="button">Contact</button>
+<body style="background-color:#1f4f5b;">
 
-        <nav>
-  <ul>
-    <li><a href="default.asp">Home</a></li>
-    <li><a href="news.asp">News</a></li>
-    <li><a href="contact.asp">Contact</a></li>
-    <li><a href="about.asp">About</a></li>
-  </ul>
-</nav>
+  <!-- MAIN WRAPPER -->
+  <div class="main-container">
 
+    <!-- NAV BAR -->
+    <div class="one-container"> <!-- background -->
+      <color:#CF8E80;>
+      
+
+      <div class="two-container">
+        <h1>how being active has changed my life</h1>
+      </div>
+
+      <nav>
+        <b><ul>
+          <li><a href="KierstenMcComas_InteractivityIISp26_Project-1.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="photos.html">photos</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+        </b>
+      </nav>
+
+      <!-- Audio barrr -->
+<div class="audio-bar">
+  <audio id="player" preload="auto">
+    <source src="./end-of-line-but-better.mp3" type="audio/mpeg">
+  </audio>
+
+  <span id="currentTime">0:00</span>
+
+  <button id="playBtn">▶</button>
+  <input type="range" id="seek" min="0" max="100" value="0">
+
+  <span id="duration">3:19</span>
+</div>
+
+
+
+
+
+
+      <!-- 3 COLUMN SECTION -->
+<div class="box">
+    <div class="card-inner">
+      <h2>getting into the gym</h2>
+      <width="300%" height="auto">
+    <align='left'>
+      <p>Throughout middle and high school, I didn't really consider myself a particularly athletic person. I took up several sports as a kid but they were never really my thing. It wasn't until my senior year of high school that I would be encouraged to work out officially. I'd watch transformation videos of other people and knew that it would never be me. After many excuses and protests however, I gave in. It took a few weeks for me to actually start enjoying the work I was doing, but once it took hold I realized just how beneficial it started to be in my life.</p>
+      </align>
+    </div>
+      <div class="split-container">
+
+
+<!-- 3 COLUMN SECTION -->
+  <div class="box">
+    <div class="card-inner">
+      <h2>how to gain muscle</h2> <!-- bottom row cards -->
+      <ul>
+        <li>protein intake</li>
+        <li>proper sleep</li>
+        <li>focus on form
+        <li>consistency</li>
+       <li>challenge</li>
+      </ul>
+      <h2>recovery</h2> <!-- bottom row cards -->
+      <ul>
+        <li>hydration</li>
+        <li>stretching</li>
+        <li>rest days</li>
+        
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="card-inner">
+      <h2>after</h2>
+       <img src="aftergym.jpg" class="artist-img">
+
+      <p>sept 14, 2024</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="card-inner">
+      <h2>before</h2>
+       <img src="old3111.jpg" class="artist-img">
+      <p>jan 16, 2022</p>
+    </div>
+  </div>
+  
+
+  <div class="box">
+    <div class="card-inner">
+      <h2>physical activities</h2>
+      <ul>
+        <li>weightlifting</li>
+        <li>kickboxing</li>
+        <li>brazilian jiujitsu</li>
+      </ul>
+      
+    </div>
+  </div>
+  
+  <div class="box">
+    <div class="card-inner">
+      <h2>improvements</h2>
+      <width="300%" height="auto">
+      <ul>
+        <li>self confidence</li>
+        <li>health and wellness</li>
+        <li>emotional regulation</li>
+        <li>enjoyment of life</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="card-inner">
+      <h2>instagram</h2>
+      <width="300%" height="auto">
+      <p>gymgirl_kier</p>
+      <a href="https://www.instagram.com/gymgirl_kier/" target="_blank">
+    <button>check it out</button>
+    
+</a>
+    </div>
+     </div>
+    
+    </div>
     </div>
 
-    <!-- Colors of my Containers -->
-    <style>
-        .one-container {
-            background-color: plum; 
-            padding: 20px;
-            border: 1px solid black;
-        }
-    </style>
-
-     <style>
-        .two-container {
-            background-color: rgb(164, 219, 146); 
-            padding: 20px;
-            border: 1px solid plum;
-        }
-    </style>
 
 
-<!-- Container Radius-->
-<style>.one-container {
-  border-radius: 15px; /* Applies a 15px radius to all corners */
-  border: 2px solid red;
-  padding: 10px;
-</style>
 
 
-<style>.two-container {
-  border-radius: 15px; /* Applies a 15px radius to all corners */
-  border: 2px solid red;
-  padding: 10px;
+<script>
+const audio = document.getElementById("player");
+const playBtn = document.getElementById("playBtn");
+const seek = document.getElementById("seek");
+
+/* Wait for audio file to be ready */
+audio.addEventListener("loadedmetadata", () => {
+  seek.value = 0;
+});
+
+/* Play / Pause */
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play().catch(err => console.log(err));
+    playBtn.textContent = "⏸";
+  } else {
+    audio.pause();
+    playBtn.textContent = "▶";
+  }
+});
+
+/* Update slider as song plays */
+audio.addEventListener("timeupdate", () => {
+  if (!isNaN(audio.duration)) {
+    seek.value = (audio.currentTime / audio.duration) * 100;
+  }
+});
+
+/* Scrub */
+seek.addEventListener("input", () => {
+  if (!isNaN(audio.duration)) {
+    audio.currentTime = (seek.value / 100) * audio.duration;
+  }
+});
+
+const currentTimeEl = document.getElementById("currentTime");
+const durationEl = document.getElementById("duration");
+
+/* Convert seconds → 0:00 format */
+function formatTime(seconds) {
+  const min = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${min}:${sec.toString().padStart(2, "0")}`;
 }
 
+/* When audio loads */
+audio.addEventListener("loadedmetadata", () => {
+  durationEl.textContent = formatTime(audio.duration);
+});
 
+/* Update while playing */
+audio.addEventListener("timeupdate", () => {
+  currentTimeEl.textContent = formatTime(audio.currentTime);
+});
 
-
-
-
-
-
-    <script src="script.js"></script>
+</script>
+    
 </body>
-</html>
 
-
-</body>
-</html>
-</html>
-
-
-</body>
-</html>
