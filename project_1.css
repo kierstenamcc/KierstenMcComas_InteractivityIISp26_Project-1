@@ -158,6 +158,19 @@ nav li a:hover {
   text-align: center;
 }
 
+/*Keeping it inside the container*/
+.audio-bar {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#seek {
+  flex: 1;
+  min-width: 0;
+}
+
+
 
       /* Play button */
       #audio-bar button,
